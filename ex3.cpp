@@ -1,7 +1,7 @@
 // test with:
 // g++ -o ex3 ex3.cpp && ./ex3 1 2 3 3 4 2
 // or
-//g++ -o ex3 ex3.cpp && ./ex3 1 
+// g++ -o ex3 ex3.cpp && ./ex3 1 
 #include <random>
 #include <iostream>
 #include <assert.h>
