@@ -19,7 +19,10 @@ void test_vector_length(const UnsShInt argc)
 
 int main(int argc, char *argv[])
 {	
+	UnsShInt tmp=0;
 	test_vector_length(argc);
+
+    
 	vector<UnsShInt> vect{};
 
 	for( UnsShInt i = 1;i<argc;i++)
@@ -43,10 +46,13 @@ int main(int argc, char *argv[])
     cout<<"Random chose the: "<<win_value<<endl;
 
    
-    	vector<UnsShInt>::iterator it = find(vect.begin(), vect.end(), win_value);
-    	if (it != vect.end())
-		cout << "You won" << std::endl;
+    	tmp=count(vect.begin(), vect.end(), win_value);
+    	if (tmp)
+    	{
+			cout << "You chose right answer: "<<tmp<< " times." << std::endl;
+		}
 		else
-		cout << "You lost" << std::endl;
+		cout << "You lost." << std::endl;
 	return 0;
+
 }
